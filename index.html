@@ -66,14 +66,6 @@
         font-size: 2em;
     }
 
-    /* إضافة اسم المدير فقط */
-    .owner-name {
-        margin-top: 6px;
-        font-size: 1em;
-        color: #ffd700;
-        font-weight: bold;
-    }
-
     header p {
         margin-top: 10px;
         font-size: 1.1em;
@@ -266,22 +258,151 @@
     }
 </style>
 </head>
-
 <body>
 
 <header>
     <img src="top-image.png" alt="صورة بدون خلفية" class="header-top-image">
     <img src="logo.png" alt="لوجو أكاديمية سيليا" class="logo">
-
     <h1>أكاديمية سيليا لتعليم اللغة الإنجليزية</h1>
-
-    <!-- الإضافة الوحيدة -->
-    <p class="owner-name">Academy Director: Mr. Mohammad Tarek</p>
-
     <p>أكاديمية سيليا لتعليم اللغة الإنجليزية - نساعد الطلاب على اتقان المحادثة، النطق، والقواعد باستخدام أفضل المناهج الدولية.</p>
 </header>
 
-<!-- باقي الكود كما هو بدون أي تغيير -->
+<div class="main-container">
+    <!-- القسم الأيسر بالإنجليزي -->
+    <aside class="sidebar sidebar-left">
+        <h3>About Celia Academy</h3>
+        <p>Celia Academy for English is your ultimate destination to master all language skills: conversation, pronunciation, and grammar. We empower students to speak confidently, understand international curricula, and acquire practical skills for study, work, and daily life.</p>
+
+        <h3>What We Offer</h3>
+        <ul>
+            <li>Top internationally certified teachers</li>
+            <li>Comprehensive courses for all levels</li>
+            <li>Interactive and enjoyable lessons</li>
+            <li>Continuous student support</li>
+            <li>Accredited international curricula</li>
+            <li>Improve pronunciation and conversation skills</li>
+            <li>Flexible learning (online and offline courses)</li>
+        </ul>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="content">
+
+        <!-- قسم الكورس الشامل -->
+        <section id="course">
+            <h2>الكورس الشامل</h2>
+            <div class="card">
+                <img src="course.jpg" alt="الكورس الشامل">
+                <h3>كورسات المحادثة - فونك - جرامر</h3>
+                <p>تعلم كل مهارات اللغة الإنجليزية (المحادثة، النطق، والقواعد) في كورس واحد شامل وممتع.</p>
+            </div>
+        </section>
+
+        <!-- قسم المناهج الدراسية -->
+        <section id="curriculum">
+            <h2>المناهج الدراسية</h2>
+            <div class="card">
+                <img src="curriculum.jpg" alt="المناهج الدراسية">
+                <h3>مناهج دول الخليج ومصر</h3>
+                <p>نقدم المناهج المصرية ومناهج السعودية، قطر، الإمارات.</p>
+            </div>
+        </section>
+
+        <!-- نموذج حجز الطلاب -->
+        <section id="booking">
+            <h2>نموذج حجز للطالب</h2>
+            <div class="card">
+                <form id="booking-form">
+                    <label for="name">الاسم الكامل:</label>
+                    <input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
+
+                    <label for="phone">رقم الهاتف:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="أدخل رقم هاتفك" required>
+
+                    <label for="level">المستوى المطلوب:</label>
+                    <select id="level" name="level" required>
+                        <option value="">اختر المستوى</option>
+                        <option value="beginner">مبتدئ</option>
+                        <option value="intermediate">متوسط</option>
+                        <option value="advanced">متقدم</option>
+                    </select>
+
+                    <label for="curriculum">المنهج المطلوب:</label>
+                    <select id="curriculum" name="curriculum" required>
+                        <option value="">اختر المنهج</option>
+                        <option value="egyptian">المنهج المصري</option>
+                        <option value="saudi">المنهج السعودي</option>
+                        <option value="qatari">المنهج القطري</option>
+                        <option value="emirati">المنهج الإماراتي</option>
+                    </select>
+
+                    <label for="foundation">هل الطالب يحتاج تأسيس؟</label>
+                    <select id="foundation" name="foundation" required>
+                        <option value="">اختر</option>
+                        <option value="yes">نعم</option>
+                        <option value="no">لا</option>
+                    </select>
+
+                    <label for="message">ملاحظات / رسالة:</label>
+                    <textarea id="message" name="message" placeholder="أدخل أي ملاحظات" rows="4"></textarea>
+
+                    <button type="submit" class="submit-btn">إرسال الحجز عبر واتساب</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- قسم التواصل بعد نموذج الحجز -->
+        <section id="contact">
+            <h2>تواصل معنا</h2>
+            <div class="card">
+                <h3>أرقام التواصل</h3>
+                <p>+2012 02328529</p>
+                <p>+2012 02325029</p>
+                <a class="whatsapp-btn" href="https://wa.me/201202328529" target="_blank">احجز عبر واتساب</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- القسم الأيمن بالعربي -->
+    <aside class="sidebar sidebar-right">
+        <h3>عن أكاديمية سيليا</h3>
+        <p>أكاديمية سيليا لتعليم اللغة الإنجليزية هي وجهتك الأمثل لإتقان اللغة الإنجليزية بكل مهاراتها  المحادثة، النطق، والقواعد. نسعى لتمكين الطلاب من التحدث بثقة، وفهم المناهج الدولية، واكتساب مهارات عملية تساعدهم في الدراسة والعمل.</p>
+
+        <h3>ما نقدمه</h3>
+        <ul>
+            <li>أفضل المعلمين المدربين دولياً</li>
+            <li>كورسات شاملة لجميع المستويات</li>
+            <li>دروس تفاعلية وممتعة</li>
+            <li>دعم مستمر للطلاب</li>
+            <li>مناهج دولية ومعتمدة</li>
+            <li>تحسين مهارات النطق والمحادثة</li>
+            <li>مرونة في التعلم (دورات أونلاين وأوفلاين)</li>
+        </ul>
+    </aside>
+</div>
+
+<footer>
+    جميع الحقوق محفوظة © 2025 أكاديمية سيليا
+</footer>
+
+<script>
+    const form = document.getElementById('booking-form');
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const level = document.getElementById('level').value;
+        const curriculum = document.getElementById('curriculum').value;
+        const foundation = document.getElementById('foundation').value;
+        const message = document.getElementById('message').value;
+
+        const text = `حجز طالب جديد:%0Aالاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aالمستوى المطلوب: ${level}%0Aالمنهج: ${curriculum}%0Aهل يحتاج تأسيس: ${foundation}%0Aملاحظات: ${message}`;
+        const whatsappNumber = "201202328529";
+        window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
+    });
+</script>
 
 </body>
 </html>
