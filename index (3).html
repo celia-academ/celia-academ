@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أكاديمية سيليا لتعليم اللغة الإنجليزية</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #222;
+        background: url('background.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.6);
+        z-index: -1;
+    }
+
+    header {
+        position: relative;
+        background: url('header-bg.jpg') no-repeat center center;
+        background-size: cover;
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .header-top-image {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 150px;
+        height: auto;
+        z-index: 2;
+    }
+
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        z-index: -1;
+    }
+
+    header img.logo {
+        width: 200px;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2em;
+    }
+
+    /* إضافة اسم المدير فقط */
+    .owner-name {
+        margin-top: 6px;
+        font-size: 1em;
+        color: #ffd700;
+        font-weight: bold;
+    }
+
+    header p {
+        margin-top: 10px;
+        font-size: 1.1em;
+        color: #e0f7ff;
+    }
+
+    .main-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .content {
+        flex: 2;
+        padding: 20px;
+    }
+
+    .sidebar {
+        flex: 1;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        height: fit-content;
+        position: sticky;
+        top: 20px;
+        font-size: 1.15em;
+        line-height: 1.6;
+    }
+
+    .sidebar-right {
+        text-align: right;
+        margin-left: 20px;
+    }
+
+    .sidebar-left {
+        text-align: left;
+        margin-right: 20px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar li {
+        margin: 10px 0;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .sidebar h3 {
+        margin-top: 0;
+        color: #4facfe;
+    }
+
+    .sidebar p {
+        margin-bottom: 15px;
+    }
+
+    section {
+        margin-bottom: 40px;
+    }
+
+    #course h2,
+    #curriculum h2,
+    #contact h2,
+    #booking h2 {
+        text-align: center;
+        color: black;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+        text-align: center;
+        max-width: 500px;
+        margin: 20px auto;
+        transition: transform 0.3s;
+        border: 3px solid black;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .card h3 {
+        margin: 10px 0;
+        color: #333;
+    }
+
+    .card p {
+        font-size: 0.95em;
+        color: #555;
+    }
+
+    #contact .card p {
+        color: green;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    #contact .whatsapp-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: #25D366;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s;
+    }
+
+    #contact .whatsapp-btn:hover {
+        background-color:#128C7E;
+    }
+
+    footer {
+        background: #4facfe;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+
+    button.submit-btn {
+        background-color:#25D366;
+        color:#fff;
+        padding:12px 25px;
+        border:none;
+        border-radius:8px;
+        font-weight:bold;
+        cursor:pointer;
+    }
+
+    button.submit-btn:hover {
+        background-color:#128C7E;
+    }
+
+    @media(max-width:1024px) {
+        .main-container {
+            flex-direction: column;
+        }
+        .sidebar {
+            margin-bottom: 20px;
+            position: relative;
+            top: 0;
+        }
+        .sidebar-left, .sidebar-right {
+            text-align: right;
+        }
+    }
+
+    @media(max-width:768px) {
+        header h1 {
+            font-size: 1.5em;
+        }
+        header p {
+            font-size: 1em;
+        }
+        header img.logo {
+            width: 150px;
+        }
+        .header-top-image {
+            width: 100px;
+        }
+        .sidebar {
+            font-size: 1.1em;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="top-image.png" alt="صورة بدون خلفية" class="header-top-image">
+    <img src="logo.png" alt="لوجو أكاديمية سيليا" class="logo">
+
+    <h1>أكاديمية سيليا لتعليم اللغة الإنجليزية</h1>
+
+    <!-- الإضافة الوحيدة -->
+    <p class="owner-name">Academy Director: Mr. Mohammad Tarek</p>
+
+    <p>أكاديمية سيليا لتعليم اللغة الإنجليزية - نساعد الطلاب على اتقان المحادثة، النطق، والقواعد باستخدام أفضل المناهج الدولية.</p>
+</header>
+
+<!-- باقي الكود كما هو بدون أي تغيير -->
+
+</body>
+</html>
