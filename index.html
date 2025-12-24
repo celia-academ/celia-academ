@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>أكاديمية سيليا لتعليم اللغة الإنجليزية</title>
+
 <style>
     body {
         font-family: 'Arial', sans-serif;
@@ -34,15 +35,6 @@
         text-align: center;
     }
 
-    .header-top-image {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 150px;
-        height: auto;
-        z-index: 2;
-    }
-
     header::before {
         content: "";
         position: absolute;
@@ -54,9 +46,16 @@
         z-index: -1;
     }
 
+    .header-top-image {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 150px;
+        z-index: 2;
+    }
+
     header img.logo {
         width: 200px;
-        height: auto;
         display: block;
         margin: 0 auto 10px;
     }
@@ -64,6 +63,14 @@
     header h1 {
         margin: 0;
         font-size: 2em;
+    }
+
+    /* اسم المدير */
+    .owner-name {
+        margin-top: 8px;
+        font-size: 1em;
+        color: #ffd700;
+        font-weight: bold;
     }
 
     header p {
@@ -74,9 +81,8 @@
 
     .main-container {
         display: flex;
-        flex-wrap: wrap;
         max-width: 1400px;
-        margin: 0 auto;
+        margin: auto;
         padding: 20px;
     }
 
@@ -88,14 +94,12 @@
     .sidebar {
         flex: 1;
         padding: 20px;
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(255,255,255,0.3);
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        height: fit-content;
         position: sticky;
         top: 20px;
-        font-size: 1.15em;
-        line-height: 1.6;
+        height: fit-content;
     }
 
     .sidebar-right {
@@ -108,38 +112,8 @@
         margin-right: 20px;
     }
 
-    .sidebar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .sidebar li {
-        margin: 10px 0;
-        font-weight: bold;
-        color: #333;
-    }
-
-    .sidebar h3 {
-        margin-top: 0;
-        color: #4facfe;
-    }
-
-    .sidebar p {
-        margin-bottom: 15px;
-    }
-
     section {
         margin-bottom: 40px;
-    }
-
-    #course h2,
-    #curriculum h2,
-    #contact h2,
-    #booking h2 {
-        text-align: center;
-        color: black;
-        margin-bottom: 20px;
     }
 
     .card {
@@ -147,53 +121,15 @@
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         padding: 20px;
-        text-align: center;
         max-width: 500px;
         margin: 20px auto;
-        transition: transform 0.3s;
+        text-align: center;
         border: 3px solid black;
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
     }
 
     .card img {
         width: 100%;
         border-radius: 10px;
-        margin-bottom: 15px;
-    }
-
-    .card h3 {
-        margin: 10px 0;
-        color: #333;
-    }
-
-    .card p {
-        font-size: 0.95em;
-        color: #555;
-    }
-
-    #contact .card p {
-        color: green;
-        font-weight: bold;
-        margin: 5px 0;
-    }
-
-    #contact .whatsapp-btn {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 20px;
-        background: #25D366;
-        color: #fff;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: background 0.3s;
-    }
-
-    #contact .whatsapp-btn:hover {
-        background-color:#128C7E;
     }
 
     footer {
@@ -203,206 +139,67 @@
         padding: 20px;
     }
 
-    input, select, textarea {
-        width: 100%;
-        padding: 10px;
-        margin: 5px 0 15px 0;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-    }
-
-    button.submit-btn {
-        background-color:#25D366;
-        color:#fff;
-        padding:12px 25px;
-        border:none;
-        border-radius:8px;
-        font-weight:bold;
-        cursor:pointer;
-    }
-
-    button.submit-btn:hover {
-        background-color:#128C7E;
-    }
-
-    @media(max-width:1024px) {
+    @media (max-width: 1024px) {
         .main-container {
             flex-direction: column;
         }
         .sidebar {
-            margin-bottom: 20px;
             position: relative;
             top: 0;
-        }
-        .sidebar-left, .sidebar-right {
-            text-align: right;
-        }
-    }
-
-    @media(max-width:768px) {
-        header h1 {
-            font-size: 1.5em;
-        }
-        header p {
-            font-size: 1em;
-        }
-        header img.logo {
-            width: 150px;
-        }
-        .header-top-image {
-            width: 100px;
-        }
-        .sidebar {
-            font-size: 1.1em;
+            margin-bottom: 20px;
         }
     }
 </style>
 </head>
+
 <body>
 
 <header>
-    <img src="top-image.png" alt="صورة بدون خلفية" class="header-top-image">
-    <img src="logo.png" alt="لوجو أكاديمية سيليا" class="logo">
+    <img src="top-image.png" class="header-top-image" alt="">
+    <img src="logo.png" class="logo" alt="Celia Academy Logo">
+
     <h1>أكاديمية سيليا لتعليم اللغة الإنجليزية</h1>
-    <p>أكاديمية سيليا لتعليم اللغة الإنجليزية - نساعد الطلاب على اتقان المحادثة، النطق، والقواعد باستخدام أفضل المناهج الدولية.</p>
+
+    <!-- اسم المدير -->
+    <p class="owner-name">Academy Director: Mr. Mohammad Tarek</p>
+
+    <p>
+        أكاديمية سيليا لتعليم اللغة الإنجليزية - نساعد الطلاب على إتقان المحادثة،
+        النطق، والقواعد باستخدام أفضل المناهج الدولية.
+    </p>
 </header>
 
 <div class="main-container">
-    <!-- القسم الأيسر بالإنجليزي -->
+
     <aside class="sidebar sidebar-left">
         <h3>About Celia Academy</h3>
-        <p>Celia Academy for English is your ultimate destination to master all language skills: conversation, pronunciation, and grammar. We empower students to speak confidently, understand international curricula, and acquire practical skills for study, work, and daily life.</p>
-
-        <h3>What We Offer</h3>
-        <ul>
-            <li>Top internationally certified teachers</li>
-            <li>Comprehensive courses for all levels</li>
-            <li>Interactive and enjoyable lessons</li>
-            <li>Continuous student support</li>
-            <li>Accredited international curricula</li>
-            <li>Improve pronunciation and conversation skills</li>
-            <li>Flexible learning (online and offline courses)</li>
-        </ul>
+        <p>
+            Celia Academy for English empowers students to master conversation,
+            pronunciation, and grammar with confidence.
+        </p>
     </aside>
 
-    <!-- المحتوى الرئيسي -->
     <div class="content">
-
-        <!-- قسم الكورس الشامل -->
-        <section id="course">
-            <h2>الكورس الشامل</h2>
+        <section>
             <div class="card">
-                <img src="course.jpg" alt="الكورس الشامل">
-                <h3>كورسات المحادثة - فونك - جرامر</h3>
-                <p>تعلم كل مهارات اللغة الإنجليزية (المحادثة، النطق، والقواعد) في كورس واحد شامل وممتع.</p>
+                <h3>Comprehensive English Courses</h3>
+                <p>Conversation – Phonics – Grammar</p>
             </div>
         </section>
-
-        <!-- قسم المناهج الدراسية -->
-        <section id="curriculum">
-            <h2>المناهج الدراسية</h2>
-            <div class="card">
-                <img src="curriculum.jpg" alt="المناهج الدراسية">
-                <h3>مناهج دول الخليج ومصر</h3>
-                <p>نقدم المناهج المصرية ومناهج السعودية، قطر، الإمارات.</p>
-            </div>
-        </section>
-
-        <!-- نموذج حجز الطلاب -->
-        <section id="booking">
-            <h2>نموذج حجز للطالب</h2>
-            <div class="card">
-                <form id="booking-form">
-                    <label for="name">الاسم الكامل:</label>
-                    <input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
-
-                    <label for="phone">رقم الهاتف:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="أدخل رقم هاتفك" required>
-
-                    <label for="level">المستوى المطلوب:</label>
-                    <select id="level" name="level" required>
-                        <option value="">اختر المستوى</option>
-                        <option value="beginner">مبتدئ</option>
-                        <option value="intermediate">متوسط</option>
-                        <option value="advanced">متقدم</option>
-                    </select>
-
-                    <label for="curriculum">المنهج المطلوب:</label>
-                    <select id="curriculum" name="curriculum" required>
-                        <option value="">اختر المنهج</option>
-                        <option value="egyptian">المنهج المصري</option>
-                        <option value="saudi">المنهج السعودي</option>
-                        <option value="qatari">المنهج القطري</option>
-                        <option value="emirati">المنهج الإماراتي</option>
-                    </select>
-
-                    <label for="foundation">هل الطالب يحتاج تأسيس؟</label>
-                    <select id="foundation" name="foundation" required>
-                        <option value="">اختر</option>
-                        <option value="yes">نعم</option>
-                        <option value="no">لا</option>
-                    </select>
-
-                    <label for="message">ملاحظات / رسالة:</label>
-                    <textarea id="message" name="message" placeholder="أدخل أي ملاحظات" rows="4"></textarea>
-
-                    <button type="submit" class="submit-btn">إرسال الحجز عبر واتساب</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- قسم التواصل بعد نموذج الحجز -->
-        <section id="contact">
-            <h2>تواصل معنا</h2>
-            <div class="card">
-                <h3>أرقام التواصل</h3>
-                <p>+2012 02328529</p>
-                <p>+2012 02325029</p>
-                <a class="whatsapp-btn" href="https://wa.me/201202328529" target="_blank">احجز عبر واتساب</a>
-            </div>
-        </section>
-
     </div>
 
-    <!-- القسم الأيمن بالعربي -->
     <aside class="sidebar sidebar-right">
         <h3>عن أكاديمية سيليا</h3>
-        <p>أكاديمية سيليا لتعليم اللغة الإنجليزية هي وجهتك الأمثل لإتقان اللغة الإنجليزية بكل مهاراتها  المحادثة، النطق، والقواعد. نسعى لتمكين الطلاب من التحدث بثقة، وفهم المناهج الدولية، واكتساب مهارات عملية تساعدهم في الدراسة والعمل.</p>
-
-        <h3>ما نقدمه</h3>
-        <ul>
-            <li>أفضل المعلمين المدربين دولياً</li>
-            <li>كورسات شاملة لجميع المستويات</li>
-            <li>دروس تفاعلية وممتعة</li>
-            <li>دعم مستمر للطلاب</li>
-            <li>مناهج دولية ومعتمدة</li>
-            <li>تحسين مهارات النطق والمحادثة</li>
-            <li>مرونة في التعلم (دورات أونلاين وأوفلاين)</li>
-        </ul>
+        <p>
+            أكاديمية متخصصة في تعليم اللغة الإنجليزية بأسلوب حديث ومناهج معتمدة.
+        </p>
     </aside>
+
 </div>
 
 <footer>
     جميع الحقوق محفوظة © 2025 أكاديمية سيليا
 </footer>
-
-<script>
-    const form = document.getElementById('booking-form');
-    form.addEventListener('submit', function(e){
-        e.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const level = document.getElementById('level').value;
-        const curriculum = document.getElementById('curriculum').value;
-        const foundation = document.getElementById('foundation').value;
-        const message = document.getElementById('message').value;
-
-        const text = `حجز طالب جديد:%0Aالاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aالمستوى المطلوب: ${level}%0Aالمنهج: ${curriculum}%0Aهل يحتاج تأسيس: ${foundation}%0Aملاحظات: ${message}`;
-        const whatsappNumber = "201202328529";
-        window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
-    });
-</script>
 
 </body>
 </html>
