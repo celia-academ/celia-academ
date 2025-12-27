@@ -249,7 +249,9 @@
         header img.logo {
             width: 150px;
         }
-       
+        .header-top-image {
+            width: 100px;
+        }
         .sidebar {
             font-size: 1.1em;
         }
@@ -259,17 +261,16 @@
 <body>
 
 <header>
-       <img src="logo.png" alt="لوجو أكاديمية سيليا" class="logo">
+    <img src="top-image.png" alt="صورة بدون خلفية" class="header-top-image">
+    <img src="logo.png" alt="لوجو أكاديمية سيليا" class="logo">
     <h1>أكاديمية سيليا لتعليم اللغة الإنجليزية</h1>
-    <p>  هنا تبدأ رحلة الإبداع والتميز</p>
-
-
+    <p>  نساعد الطلاب على اتقان المحادثة، النطق، والقواعد باستخدام أفضل المناهج الدولي</p>
 </header>
 
 <div class="main-container">
    <!-- القسم الأيسر بالإنجليزي -->
 <aside class="sidebar sidebar-left">
-    <p>Mr.Mohamed Tarek  Founder and Director of Celia Academy, and an experienced English teacher with 6 years of online teaching.</p>
+    <p>No problem in English.</p>
 </aside>
 
 <style>
@@ -414,6 +415,37 @@
         window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
     });
 </script>
+
+<!-- زر انضم لجروب الواتساب (ثابت أسفل الصفحة) -->
+<a href="https://chat.whatsapp.com/Gi9JMqFskY39Q5R34f7Q7n"
+   target="_blank"
+   class="whatsapp-fixed-btn">
+   انضم لجروب الواتساب
+</a>
+
+<style>
+.whatsapp-fixed-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #fff;
+    padding: 14px 26px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: 0.3s ease;
+}
+
+.whatsapp-fixed-btn:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.05);
+}
+</style>
+
 
 </body>
 </html>
