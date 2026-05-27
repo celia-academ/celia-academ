@@ -548,40 +548,174 @@
             box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
         }
 
-        /* --- الشاشات المتجاوبة (Responsive Design) --- */
-        @media (max-width: 1024px) {
-            .main-wrapper {
-                grid-template-columns: 1fr;
-            }
-            .sidebar-sticky {
-                position: relative;
-                top: 0;
-            }
-            .hero h1 {
-                font-size: 2.3rem;
-            }
-        }
+       /* --- الشاشات المتجاوبة (Responsive Design) --- */
 
-        @media (max-width: 768px) {
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-            .form-group-full {
-                grid-column: span 1;
-            }
-            .form-premium {
-                padding: 25px;
-            }
-            .hero-top-image {
-                width: 80px;
-            }
-            .whatsapp-floating {
-                padding: 12px 20px;
-                bottom: 20px;
-                right: 20px;
-                font-size: 0.9rem;
-            }
-        }
+/* 📱 تابلت + شاشات متوسطة */
+@media (max-width: 1024px) {
+
+    .main-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: -20px;
+    }
+
+    .sidebar-sticky {
+        position: relative;
+        top: 0;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.4;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    .logo-container img {
+        width: 220px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* 📱 موبايل */
+@media (max-width: 768px) {
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        padding: 25px 0 30px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .english-badge {
+        font-size: 1rem;
+        padding: 6px 14px;
+    }
+
+    .logo-container img {
+        width: 180px;
+    }
+
+    .hero-top-image {
+        width: 65px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .card-body {
+        padding: 18px;
+    }
+
+    .card-body h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-body p {
+        font-size: 0.9rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .stat-item h4 {
+        font-size: 2rem;
+    }
+
+    .form-premium {
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .whatsapp-floating {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .sidebar-sticky {
+        padding: 20px;
+    }
+
+    .accordion-question {
+        font-size: 1rem;
+    }
+
+    .footer-socials a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* 📱 موبايل صغير جداً */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+
+    .card-body h3 {
+        font-size: 1rem;
+    }
+
+    .stat-item h4 {
+        font-size: 1.8rem;
+    }
+
+    .whatsapp-floating span {
+        display: none; /* يخلي الزر أيقونة فقط على الموبايل الصغير */
+    }
+}
     </style>
 </head>
 <body>
