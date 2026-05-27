@@ -1,451 +1,974 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>أكاديمية سيليا لتعليم اللغة الإنجليزية</title>
-<style>
-    body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        color: #222;
-        background: url('background.jpg') no-repeat center center fixed;
-        background-size: cover;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية سيليا لتعليم اللغة الإنجليزية</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.6);
-        z-index: -1;
-    }
-
-    header {
-        position: relative;
-        background: url('header-bg.jpg') no-repeat center center;
-        background-size: cover;
-        color: #fff;
-        padding: 30px 20px;
-        text-align: center;
-    }
-
-    .header-top-image {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 150px;
-        height: auto;
-        z-index: 2;
-    }
-
-    header::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.3);
-        z-index: -1;
-    }
-
-    header img.logo {
-        width: 200px;
-        height: auto;
-        display: block;
-        margin: 0 auto 10px;
-    }
-
-    header h1 {
-        margin: 0;
-        font-size: 2em;
-    }
-
-    header p {
-        margin-top: 10px;
-        font-size: 1.1em;
-        color: #e0f7ff;
-    }
-
-    .main-container {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    .content {
-        flex: 2;
-        padding: 20px;
-    }
-
-    .sidebar {
-        flex: 1;
-        padding: 20px;
-        background: rgba(255, 255, 255, 0.3);
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        height: fit-content;
-        position: sticky;
-        top: 20px;
-        font-size: 1.15em;
-        line-height: 1.6;
-    }
-
-    .sidebar-right {
-        text-align: right;
-        margin-left: 20px;
-    }
-
-    .sidebar-left {
-        text-align: left;
-        margin-right: 20px;
-    }
-
-    .sidebar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .sidebar li {
-        margin: 10px 0;
-        font-weight: bold;
-        color: #333;
-    }
-
-    .sidebar h3 {
-        margin-top: 0;
-        color: #4facfe;
-    }
-
-    .sidebar p {
-        margin-bottom: 15px;
-    }
-
-    section {
-        margin-bottom: 40px;
-    }
-
-    #course h2,
-    #curriculum h2,
-    #contact h2,
-    #booking h2 {
-        text-align: center;
-        color: black;
-        margin-bottom: 20px;
-    }
-
-    .card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        padding: 20px;
-        text-align: center;
-        max-width: 500px;
-        margin: 20px auto;
-        transition: transform 0.3s;
-        border: 3px solid black;
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-    }
-
-    .card img {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 15px;
-    }
-
-    .card h3 {
-        margin: 10px 0;
-        color: #333;
-    }
-
-    .card p {
-        font-size: 0.95em;
-        color: #555;
-    }
-
-    #contact .card p {
-        color: green;
-        font-weight: bold;
-        margin: 5px 0;
-    }
-
-    #contact .whatsapp-btn {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 20px;
-        background: #25D366;
-        color: #fff;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: background 0.3s;
-    }
-
-    #contact .whatsapp-btn:hover {
-        background-color:#128C7E;
-    }
-
-    footer {
-        background: #4facfe;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-    }
-
-    input, select, textarea {
-        width: 100%;
-        padding: 10px;
-        margin: 5px 0 15px 0;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-    }
-
-    button.submit-btn {
-        background-color:#25D366;
-        color:#fff;
-        padding:12px 25px;
-        border:none;
-        border-radius:8px;
-        font-weight:bold;
-        cursor:pointer;
-    }
-
-    button.submit-btn:hover {
-        background-color:#128C7E;
-    }
-
-    @media(max-width:1024px) {
-        .main-container {
-            flex-direction: column;
+    <style>
+        /* --- المتغيرات الأساسية للهوية البصرية --- */
+        :root {
+            --primary: #0A2540;
+            --primary-light: #1E3A8A;
+            --accent: #DAA520;
+            --accent-hover: #B8860B;
+            --text-dark: #1E293B;
+            --text-light: #F8FAFC;
+            --bg-glass: rgba(255, 255, 255, 0.75);
+            --bg-glass-dark: rgba(10, 37, 64, 0.85);
+            --blur: 12px;
+            --border-glass: rgba(255, 255, 255, 0.3);
+            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+            --radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .sidebar {
-            margin-bottom: 20px;
+
+        /* --- الإعدادات العامة والتمرير الانسيابي --- */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- المكونات المشتركة (Buttons & Containers) --- */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 40px;
             position: relative;
-            top: 0;
         }
-        .sidebar-left, .sidebar-right {
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--text-light);
+            box-shadow: 0 4px 14px rgba(10, 37, 64, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(10, 37, 64, 0.3);
+        }
+
+        .btn-accent {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-accent:hover {
+            background: var(--accent-hover);
+            transform: translateY(-3px);
+            color: var(--text-light);
+        }
+
+        /* --- تأثير Glassmorphism للمحتوى --- */
+        .glass-card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(var(--blur));
+            -webkit-backdrop-filter: blur(var(--blur));
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
+        }
+
+        /* --- الهيدر و الـ Hero Section المعاصرة --- */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(10, 35, 64, 0.85), rgba(10, 35, 64, 0.95)), url('header-bg.jpg') center/cover no-repeat;
+            padding: 30px 0 40px;
+            color: var(--text-light);
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            overflow: hidden;
+        }
+
+        .hero-top-image {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 120px;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .hero-top-image:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .logo-container img {
+            width: 300px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        }
+
+        .hero h1 {
+            font-size: 1.7rem;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* --- قسم الإنجليزي الذكي العائم --- */
+        .english-badge {
+            background: rgba(218, 165, 32, 0.15);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 8px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* --- الهيكل الرئيسي (Main Layout) --- */
+        .main-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin: -40px auto 60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- الكروت والأقسام --- */
+        .sections-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .course-section, .curriculum-section {
+            padding: 20px 0;
+        }
+
+        .card-premium {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: auto; /* تحويل الارتفاع إلى تلقائي ليتناسب مع الصورة الكاملة */
+    background: rgba(0, 0, 0, 0.02); /* خلفية خفيفة جداً للحفاظ على جمالية الكارد */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* مسافة أمان داخلية لحماية أطراف الصورة */
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* يضمن ظهور الصورة كاملة بنسبة 100% دون أي قص */
+    border-radius: 12px; /* انحناء ناعم لأطراف الصورة ليناسب التصميم الحديث */
+    transition: var(--transition);
+}
+
+        .card-premium:hover .card-img-wrapper img {
+            transform: scale(1.08);
+        }
+
+        .card-body {
+            padding: 25px;
             text-align: right;
         }
+
+        .card-body h3 {
+            margin: 0 0 12px 0;
+            font-size: 1.4rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .card-body p {
+            margin: 0;
+            color: #556575;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* --- قسم الـ Sidebar المحسن (عن الأكاديمية) --- */
+        .sidebar-sticky {
+            position: sticky;
+            top: 30px;
+            height: fit-content;
+            padding: 30px;
+        }
+
+        .sidebar-sticky h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(10, 37, 64, 0.05);
+            padding-bottom: 10px;
+        }
+
+        .sidebar-sticky p {
+            line-height: 1.7;
+            color: #4A5568;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        .features-list li i {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        /* --- قسم مميزات إضافية (لماذا تختارنا) --- */
+        .why-us {
+            padding: 40px 0;
+        }
+
+        .feature-box {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .feature-box i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* --- قسم الإحصائيات الفاخر --- */
+        .stats-section {
+            background: var(--bg-glass-dark);
+            backdrop-filter: blur(var(--blur));
+            color: var(--text-light);
+            padding: 50px 0;
+            border-radius: var(--radius);
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item h4 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin: 0 0 5px 0;
+        }
+
+        .stat-item p {
+            margin: 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* --- النماذج الاحترافية (Booking Form) --- */
+        .booking-section {
+            padding: 20px 0;
+        }
+
+        .form-premium {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group-full {
+            grid-column: span 2;
+        }
+
+        .form-premium label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .form-premium input, .form-premium select, .form-premium textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid rgba(10, 37, 64, 0.1);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            transition: var(--transition);
+            outline: none;
+        }
+
+        .form-premium input:focus, .form-premium select:focus, .form-premium textarea:focus {
+            border-color: var(--primary);
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(10, 37, 64, 0.1);
+        }
+
+        /* --- قسم التواصل وقسم آراء الطلاب والـ FAQ --- */
+        .contact-section {
+            padding: 20px 0;
+        }
+        
+        .contact-card {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .contact-card .phone-num {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #16A34A;
+            margin: 10px 0;
+            direction: ltr;
+        }
+
+        .faq-section {
+            padding: 40px 0;
+        }
+
+        .accordion-item {
+            margin-bottom: 15px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .accordion-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .accordion-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+            color: #556575;
+            margin-top: 0;
+            line-height: 1.6;
+        }
+
+        .accordion-item.active .accordion-answer {
+            max-height: 200px;
+            margin-top: 15px;
+        }
+
+        /* --- الفوتر الاحترافي (Footer) --- */
+        footer {
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 40px 0 20px;
+            text-align: center;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-socials a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .footer-socials a:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-copy {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+
+        /* --- زر الواتساب العائم المحسن --- */
+        .whatsapp-floating {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 50px;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .whatsapp-floating:hover {
+            background: #20ba5a;
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+        }
+
+       /* --- الشاشات المتجاوبة (Responsive Design) --- */
+
+/* 📱 تابلت + شاشات متوسطة */
+@media (max-width: 1024px) {
+
+    .main-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: -20px;
     }
 
-    @media(max-width:768px) {
-        header h1 {
-            font-size: 1.5em;
-        }
-        header p {
-            font-size: 1em;
-        }
-        header img.logo {
-            width: 150px;
-        }
-        .header-top-image {
-            width: 100px;
-        }
-        .sidebar {
-            font-size: 1.1em;
-        }
+    .sidebar-sticky {
+        position: relative;
+        top: 0;
     }
-</style>
+
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.4;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    .logo-container img {
+        width: 220px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* 📱 موبايل */
+@media (max-width: 768px) {
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        padding: 25px 0 30px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .english-badge {
+        font-size: 1rem;
+        padding: 6px 14px;
+    }
+
+    .logo-container img {
+        width: 180px;
+    }
+
+    .hero-top-image {
+        width: 65px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .card-body {
+        padding: 18px;
+    }
+
+    .card-body h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-body p {
+        font-size: 0.9rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .stat-item h4 {
+        font-size: 2rem;
+    }
+
+    .form-premium {
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .whatsapp-floating {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .sidebar-sticky {
+        padding: 20px;
+    }
+
+    .accordion-question {
+        font-size: 1rem;
+    }
+
+    .footer-socials a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* 📱 موبايل صغير جداً */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+
+    .card-body h3 {
+        font-size: 1rem;
+    }
+
+    .stat-item h4 {
+        font-size: 1.8rem;
+    }
+
+    .whatsapp-floating span {
+        display: none; /* يخلي الزر أيقونة فقط على الموبايل الصغير */
+    }
+}
+    </style>
 </head>
 <body>
 
-<header>
-    <img src="top-image.png" alt="صورة بدون خلفية" class="header-top-image">
-    <img src="logo.png" alt="لوجو أكاديمية سيليا" class="logo">
-    <h1>أكاديمية سيليا لتعليم اللغة الإنجليزية</h1>
-    <p>  نساعد الطلاب على اتقان المحادثة، النطق، والقواعد باستخدام أفضل المناهج الدولي</p>
-</header>
-
-<div class="main-container">
-   <!-- القسم الأيسر بالإنجليزي -->
-<aside class="sidebar sidebar-left">
-    <p>No problem in English.</p>
-</aside>
-
-<style>
-.sidebar-left p {
-    font-weight: bold;          /* الخط عريض */
-    text-align: center;         /* النص في المنتصف */
-    font-size: 24px;            /* حجم الخط أكبر */
-    color: #DAA520;             /* لون ذهبي مناسب للون الأسمر */
-    text-shadow: 1px 1px 2px #5C4033; /* ظل خفيف لزيادة التميز */
-}
-</style>
-
-</aside>
-
-<style>
-.sidebar-left p {
-    font-weight: bold;       /* يخلي الخط عريض */
-    text-align: center;      /* يحاذي النص في المنتصف */
-}
-</style>
-
-
-       
-        </ul>
-    </aside>
-
-    <!-- المحتوى الرئيسي -->
-    <div class="content">
-
-        <!-- قسم الكورس الشامل -->
-        <section id="course">
-            <h2>الكورس الشامل</h2>
-            <div class="card">
-                <img src="course.jpg" alt="الكورس الشامل">
-                <h3>كورسات المحادثة - فونك - جرامر</h3>
-                <p>تعلم كل مهارات اللغة الإنجليزية (المحادثة، النطق، والقواعد) في كورس واحد شامل وممتع.</p>
+    <header class="hero">
+        <img src="top-image.png" alt="شعار الأكاديمية" class="hero-top-image">
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="لوجو أكاديمية سيليا">
             </div>
-        </section>
+            <div class="english-badge">.No problem in English</div>
+            <h1>أكاديمية سيليا لتعليم <span>اللغة الإنجليزية</span></h1>
+            <p>طلاقة حقيقية في الإنجليزية بأسلوب عالمي حديث.</p>
+            <a href="#booking" class="btn btn-accent"><i class="fa-solid fa-graduation-cap"></i> ابدأ التعلم الآن</a>
+        </div>
+    </header>
 
-        <!-- قسم المناهج الدراسية -->
-        <section id="curriculum">
-            <h2>المناهج الدراسية</h2>
-            <div class="card">
-                <img src="curriculum.jpg" alt="المناهج الدراسية">
-                <h3>مناهج دول الخليج ومصر</h3>
-                <p>نقدم المناهج المصرية ومناهج السعودية، قطر، الإمارات.</p>
+    <main class="container">
+        <div class="main-wrapper">
+            
+            <div class="sections-container">
+                
+                <section id="course" class="course-section">
+                    <h2 class="section-title">البرنامج الشامل لتعلم اللغة الإنجليزية للصغار والكبار من الصفر حتى الاحتراف
+</h2>
+                    <div class="glass-card card-premium">
+                        <div class="card-img-wrapper">
+                            <img src="course.jpg" alt="الكورس الشامل">
+                        </div>
+                        <div class="card-body">
+                            <h3><i class="fa-solid fa-book-open-reader" style="color:var(--accent);"></i> البرنامج الشامل لإتقان المحادثة والفونكس والجرامر</h3>
+                            <p>البرنامج الشامل لإتقان المحادثة والفونكس والجرامر هو رحلة تعليمية متكاملة تهدف إلى تمكين الطالب من استخدام اللغة الإنجليزية بثقة وطلاقة في الحياة اليومية والدراسة والعمل
+
+يركز البرنامج على تطوير مهارات التحدث من خلال تدريبات عملية على المحادثة الحقيقية، مع تحسين النطق الصحيح عبر الفونكس بطريقة سهلة ومبسطة تناسب جميع المستويات. كما يشمل شرح قواعد اللغة الإنجليزية (Grammar) بشكل تفاعلي يساعد على الفهم وليس الحفظ فقط.
+
+يتميز البرنامج بأسلوب تدريسي ممتع يعتمد على التطبيق العملي، مما يساعد الطالب على كسر حاجز الخوف من التحدث باللغة الإنجليزية، وبناء أساس قوي يجعله قادرًا على التواصل بطلاقة في وقت قصير.
+
+هذا البرنامج مناسب للمبتدئين وكذلك لمن يرغب في تطوير مستواه والوصول إلى الاحتراف في اللغة الإنجليزية.
+.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="curriculum" class="curriculum-section">
+                    <h2 class="section-title">المناهج الدراسية الدولية والمحلية</h2>
+                    <div class="glass-card card-premium">
+                        <div class="card-img-wrapper">
+                            <img src="curriculum.jpg" alt="المناهج الدراسية">
+                        </div>
+                        <div class="card-body">
+                            <h3><i class="fa-solid fa-globe" style="color:var(--accent);"></i> دعم مناهج مصر ودول الخليج العربي</h3>
+                            <p>تغطية أكاديمية متكاملة ومبسطة للمناهج الرسمية واللغات لطلاب المدارس في (مصر، المملكة العربية السعودية، قطر، والإمارات) لضمان التفوق الدراسي والحصول على الدرجات النهائية.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="why-us">
+                    <h2 class="section-title">لماذا تختار أكاديمية سيليا؟</h2>
+                    <div class="grid-layout">
+                        <div class="glass-card feature-box">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                            <h3>نخبة من المعلمين</h3>
+                            <p>طاقم تعليمي مؤهل بشهادات دولية لضمان وصول المعلومة بأحدث الاستراتيجيات.</p>
+                        </div>
+                        <div class="glass-card feature-box">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h3>فصول تفاعلية بالكامل</h3>
+                            <p>الابتعاد التام عن التلقين التقليدي والاعتماد على الألعاب التعليمية والمحادثات الثنائية.</p>
+                        </div>
+                        <div class="glass-card feature-box">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h3>متابعة وتقييم مستمر</h3>
+                            <p>تقارير دورية لأولياء الأمور لقياس تطور مستوى الطالب خطوة بخطوة.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="stats-section">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h4>+1908</h4>
+                            <p>طالب متميز تم تدريبه</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>%96</h4>
+                            <p>نسبة رضا أولياء الأمور</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>+29</h4>
+                            <p>معلم ومعلمة من ذوي الخبرة</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="booking" class="booking-section">
+                    <h2 class="section-title">(طلب انضمام)</h2>
+                    <div class="glass-card form-premium">
+                        <form id="booking-form">
+                            <div class="form-grid">
+                                <div>
+                                    <label for="name">اسم الطالب الثلاثي:</label>
+                                    <input type="text" id="name" placeholder="مثال: محمد أحمد العتيبي" required>
+                                </div>
+                                <div>
+                                    <label for="phone">رقم هاتف للتواصل (واتساب):</label>
+                                    <input type="tel" id="phone" placeholder="مثال: +201XXXXXXXX" required>
+                                </div>
+                                <div>
+                                    <label for="level">المستوى الحالي التقريبي:</label>
+                                    <select id="level" required>
+                                        <option value="">اختر المستوى الحالي</option>
+                                        <option value="مبتدئ">مبتدئ (Beginner)</option>
+                                        <option value="متوسط">متوسط (Intermediate)</option>
+                                        <option value="متقدم">متقدم (Advanced)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="curriculum-select">المنهج الدراسي المراد متابعته:</label>
+                                    <select id="curriculum-select" required>
+                                        <option value="">اختر المنهج الدراسي</option>
+                                        <option value="المنهج المصري">المنهج المصري</option>
+                                        <option value="المنهج السعودي">المنهج السعودي</option>
+                                        <option value="المنهج القطري">المنهج القطري</option>
+                                        <option value="المنهج الإماراتي">المنهج الإماراتي</option>
+                                        <option value="دورة عامة (خارج المناهج)">دورة عامة (خارج المناهج)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-full">
+                                    <label for="foundation">هل يحتاج الطالب لتأسيس مكثف في الحروف والنطق؟</label>
+                                    <select id="foundation" required>
+                                        <option value="">اختر الإجابة</option>
+                                        <option value="نعم، يحتاج تأسيس من الصفر">نعم، يحتاج تأسيس من الصفر</option>
+                                        <option value="لا، لديه مبادئ جيدة ويرغب بالتطوير">لا، لديه مبادئ جيدة ويرغب بالتطوير</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-full">
+                                    <label for="message">ملاحظات خاصة تود إطلاع الإدارة عليها:</label>
+                                    <textarea id="message" placeholder="اكتب هنا أي تفاصيل أو أهداف تود تحقيقها من الكورس..." rows="4"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fa-brand fa-whatsapp"></i> إرسال وثيقة الحجز مباشرة عبر واتساب</button>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="faq-section">
+                    <h2 class="section-title">الأسئلة الشائعة</h2>
+                    <div class="glass-card accordion-item" onclick="toggleFaq(this)">
+                        <div class="accordion-question">
+                            <span>هل الدورات تقدم أونلاين أم في مقر الأكاديمية؟</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-answer">
+                            نقدم دوراتنا بنظام تفاعلي متطور للغاية (أونلاين) عبر زوم مع سبورة ذكية، بالإضافة إلى توفر فصول (أوفلاين) في الفروع المعتمدة للأكاديمية.
+                        </div>
+                    </div>
+                    <div class="glass-card accordion-item" onclick="toggleFaq(this)">
+                        <div class="accordion-question">
+                            <span>ما هي الأعمار المستهدفة في الدورات؟</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-answer">
+                            نوفر مسارات وفصول مخصصة ومنفصلة تماماً، تبدأ من مرحلة التأسيس المبكر للأطفال (من عمر 5 سنوات) وحتى البرامج الاحترافية المتقدمة للكبار والموظفين.
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="contact-section">
+                    <h2 class="section-title">قنوات الاتصال المباشر</h2>
+                    <div class="glass-card contact-card">
+                        <h3>أرقام خدمة العملاء والتسجيل</h3>
+                        <p class="phone-num">+2012 02328529</p>
+                        <p class="phone-num">+2012 02325029</p>
+                        <a class="btn btn-primary" style="background:#25D366; border-color:#25D366; margin-top:15px;" href="https://wa.me/201202328529" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i> تواصل سريع ومباشر
+                        </a>
+                    </div>
+                </section>
+
             </div>
-        </section>
 
-        <!-- نموذج حجز الطلاب -->
-        <section id="booking">
-            <h2>نموذج حجز للطالب</h2>
-            <div class="card">
-                <form id="booking-form">
-                    <label for="name">الاسم الكامل:</label>
-                    <input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
+            <aside>
+                <div class="glass-card sidebar-sticky">
+                    <h3>عن أكاديمية سيليا</h3>
+                    <p>أكاديمية سيليا لتعليم اللغة الإنجليزية هي المنصة الرائدة والأمثل لإكساب الدارسين المهارات اللغوية الأربعة بأساليب حديثة ومحاكاة عملية للواقع اليومي والمستقبل العملي الواعد.</p>
+                    
+                    <h3>مزايا حصرية معنا</h3>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-circle-check"></i> فصول تفاعلية بأعداد محدودة جداً</li>
+                        <li><i class="fa-solid fa-circle-check"></i> التركيز على الطلاقة والمحادثة الحرة</li>
+                        <li><i class="fa-solid fa-circle-check"></i> مناهج بريطانية وأمريكية معتمدة</li>
+                        <li><i class="fa-solid fa-circle-check"></i> شهادات اجتياز لكل مستوى تعليمي</li>
+                        <li><i class="fa-solid fa-circle-check"></i> مرونة تامة في اختيار المواعيد المناسبة</li>
+                    </ul>
+                </div>
+            </aside>
 
-                    <label for="phone">رقم الهاتف:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="أدخل رقم هاتفك" required>
+        </div>
+    </main>
 
-                    <label for="level">المستوى المطلوب:</label>
-                    <select id="level" name="level" required>
-                        <option value="">اختر المستوى</option>
-                        <option value="beginner">مبتدئ</option>
-                        <option value="intermediate">متوسط</option>
-                        <option value="advanced">متقدم</option>
-                    </select>
-
-                    <label for="curriculum">المنهج المطلوب:</label>
-                    <select id="curriculum" name="curriculum" required>
-                        <option value="">اختر المنهج</option>
-                        <option value="egyptian">المنهج المصري</option>
-                        <option value="saudi">المنهج السعودي</option>
-                        <option value="qatari">المنهج القطري</option>
-                        <option value="emirati">المنهج الإماراتي</option>
-                    </select>
-
-                    <label for="foundation">هل الطالب يحتاج تأسيس؟</label>
-                    <select id="foundation" name="foundation" required>
-                        <option value="">اختر</option>
-                        <option value="yes">نعم</option>
-                        <option value="no">لا</option>
-                    </select>
-
-                    <label for="message">ملاحظات / رسالة:</label>
-                    <textarea id="message" name="message" placeholder="أدخل أي ملاحظات" rows="4"></textarea>
-
-                    <button type="submit" class="submit-btn">إرسال الحجز عبر واتساب</button>
-                </form>
+    <footer>
+        <div class="container">
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/201202328529" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
             </div>
-        </section>
+            <p class="footer-copy">جميع الحقوق محفوظة © 2026 أكاديمية سيليا الدولية لتعليم اللغة الانجليزية </p>
+        </div>
+    </footer>
 
-        <!-- قسم التواصل بعد نموذج الحجز -->
-        <section id="contact">
-            <h2>تواصل معنا</h2>
-            <div class="card">
-                <h3>أرقام التواصل</h3>
-                <p>+2012 02328529</p>
-                <p>+2012 02325029</p>
-                <a class="whatsapp-btn" href="https://wa.me/201202328529" target="_blank">احجز عبر واتساب</a>
-            </div>
-        </section>
+    <a href="https://chat.whatsapp.com/Gi9JMqFskY39Q5R34f7Q7n" target="_blank" class="whatsapp-floating">
+        <i class="fa-brands fa-whatsapp fa-lg"></i>
+        <span>انضم لجروب الواتساب المباشر</span>
+    </a>
 
-    </div>
+    <script>
+        // إرسال الحجز عبر الواتساب بشكل منسق واحترافي للغاية
+        const bookingForm = document.getElementById('booking-form');
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-    <!-- القسم الأيمن بالعربي -->
-    <aside class="sidebar sidebar-right">
-        <h3>عن أكاديمية سيليا</h3>
-        <p>أكاديمية سيليا لتعليم اللغة الإنجليزية هي وجهتك الأمثل لإتقان اللغة الإنجليزية بكل مهاراتها  المحادثة، النطق، والقواعد. نسعى لتمكين الطلاب من التحدث بثقة، وفهم المناهج الدولية، واكتساب مهارات عملية تساعدهم في الدراسة والعمل.</p>
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const level = document.getElementById('level').value;
+            const curriculum = document.getElementById('curriculum-select').value;
+            const foundation = document.getElementById('foundation').value;
+            const message = document.getElementById('message').value || "لا يوجد ملاحظات إضافية";
 
-        <h3>ما نقدمه</h3>
-        <ul>
-            <li>أفضل المعلمين المدربين دولياً</li>
-            <li>كورسات شاملة لجميع المستويات</li>
-            <li>دروس تفاعلية وممتعة</li>
-            <li>دعم مستمر للطلاب</li>
-            <li>مناهج دولية ومعتمدة</li>
-            <li>تحسين مهارات النطق والمحادثة</li>
-            <li>مرونة في التعلم (دورات أونلاين وأوفلاين)</li>
-        </ul>
-    </aside>
-</div>
+            const formattedText = `🌟 *طلب حجز طالب جديد بأكاديمية سيليا* 🌟%0A%0A` +
+                                  `👤 *اسم الطالب:* ${name}%0A` +
+                                  `📱 *رقم التواصل:* ${phone}%0A` +
+                                  `📊 *المستوى الحالي:* ${level}%0A` +
+                                  `📚 *المنهج المطلوب:* ${curriculum}%0A` +
+                                  `🚀 *بحاجة لتأسيس الحروف؟:* ${foundation}%0A` +
+                                  `📝 *ملاحظات أولياء الأمور:* ${message}%0A%0A` +
+                                  `✨ _تم إرسال الطلب تلقائياً عبر موقع الأكاديمية الرسمي_`;
 
-<footer>
-    جميع الحقوق محفوظة © 2025 أكاديمية سيليا
-</footer>
+            const adminWhatsappNumber = "201202328529";
+            window.open(`https://wa.me/${adminWhatsappNumber}?text=${formattedText}`, '_blank');
+        });
 
-<script>
-    const form = document.getElementById('booking-form');
-    form.addEventListener('submit', function(e){
-        e.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const level = document.getElementById('level').value;
-        const curriculum = document.getElementById('curriculum').value;
-        const foundation = document.getElementById('foundation').value;
-        const message = document.getElementById('message').value;
-
-        const text = `حجز طالب جديد:%0Aالاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aالمستوى المطلوب: ${level}%0Aالمنهج: ${curriculum}%0Aهل يحتاج تأسيس: ${foundation}%0Aملاحظات: ${message}`;
-        const whatsappNumber = "201202328529";
-        window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
-    });
-</script>
-
-<!-- زر انضم لجروب الواتساب (ثابت أسفل الصفحة) -->
-<a href="https://chat.whatsapp.com/Gi9JMqFskY39Q5R34f7Q7n"
-   target="_blank"
-   class="whatsapp-fixed-btn">
-   انضم لجروب الواتساب
-</a>
-
-<style>
-.whatsapp-fixed-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: #fff;
-    padding: 14px 26px;
-    border-radius: 30px;
-    font-size: 17px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-    z-index: 9999;
-    transition: 0.3s ease;
-}
-
-.whatsapp-fixed-btn:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.05);
-}
-</style>
-
-
+        // تشغيل تأثير الأكورديون التفاعلي لقسم الأسئلة الشائعة
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+            const icon = element.querySelector('.accordion-question i');
+            if(element.classList.contains('active')) {
+                icon.className = "fa-solid fa-chevron-up";
+            } else {
+                icon.className = "fa-solid fa-chevron-down";
+            }
+        }
+    </script>
 </body>
 </html>
