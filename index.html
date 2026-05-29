@@ -662,6 +662,10 @@
         grid-template-columns: 1fr;
         gap: 15px;
     }
+      
+      .form-group-full {
+    grid-column: span 1;
+}
 
     .whatsapp-floating {
         padding: 10px 14px;
@@ -901,7 +905,17 @@
                 <div class="glass-card sidebar-sticky">
                     <h3>عن أكاديمية سيليا</h3>
                     <p>أكاديمية سيليا لتعليم اللغة الإنجليزية هي المنصة الرائدة والأمثل لإكساب الدارسين المهارات اللغوية الأربعة بأساليب حديثة ومحاكاة عملية للواقع اليومي والمستقبل العملي الواعد.</p>
-                    
+
+                    <h3 style="color: var(--primary); margin-top: 20px;">
+    <i class="fa-solid fa-user-tie" style="color:var(--accent);"></i>
+    مؤسس الأكاديمية
+</h3>
+
+<p style="line-height: 1.8; color: #4A5568;">
+    الأستاذ محمد طارق، مؤسس أكاديمية سيليا، يؤمن بأن تعلم اللغة يعتمد على الممارسة وليس الحفظ،
+    لذلك تم تصميم البرامج لتطوير مهارات التحدث وبناء الثقة لدى الطلاب من البداية حتى الاحتراف.
+</p>
+
                     <h3>مزايا حصرية معنا</h3>
                     <ul class="features-list">
                         <li><i class="fa-solid fa-circle-check"></i> فصول تفاعلية بأعداد محدودة جداً</li>
@@ -915,6 +929,135 @@
 
         </div>
     </main>
+<!-- ============================= -->
+<!-- Google Drive Button Full -->
+<!-- ============================= -->
+
+<style>
+.drive-section {
+    padding: 50px 0;
+}
+
+.drive-box {
+    display: flex;
+    justify-content: center;
+}
+
+.drive-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 750px;
+
+    padding: 22px 25px;
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.08);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    transition: all 0.3s ease;
+}
+
+.drive-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+.drive-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: linear-gradient(135deg,#4285F4,#34A853,#FBBC05,#EA4335);
+
+    color: white;
+    font-size: 2rem;
+}
+
+.drive-text {
+    flex: 1;
+}
+
+.drive-text h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.drive-text p {
+    margin: 5px 0 0;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.drive-arrow {
+    font-size: 1.2rem;
+    color: #999;
+    transition: 0.3s;
+}
+
+.drive-card:hover .drive-arrow {
+    transform: translateX(-5px);
+    color: var(--accent);
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+    .drive-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .drive-arrow {
+        display: none;
+    }
+}
+</style>
+
+<section class="drive-section">
+    <div class="container">
+
+        <h2 class="section-title">ملفات الأكاديمية التعليمية</h2>
+
+        <div class="drive-box">
+
+            <a href="https://drive.google.com/drive/folders/1Z2Fz8s_N7qcey4qNJRvcsSMFqKHIhcMR?usp=drive_link"
+               target="_blank"
+               class="drive-card">
+
+                <div class="drive-icon">
+                    <i class="fa-brands fa-google-drive"></i>
+                </div>
+
+                <div class="drive-text">
+                    <h3>فتح ملفات الأكاديمية</h3>
+                    <p>جميع الملفات + المذكرات + التدريبات في مكان واحد</p>
+                </div>
+
+                <div class="drive-arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+</section>
 
     <footer>
         <div class="container">
